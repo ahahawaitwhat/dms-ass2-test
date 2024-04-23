@@ -20,20 +20,20 @@
 
         <div class="row">
             <div class="image-container"><img src="img/cir.png" id="circle" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/tri.png" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/squ.png" height="200" width="200"/></div>
+            <div class="image-container"><img src="img/tri.png" id="tri" height="200" width="200"/></div>
+            <div class="image-container"><img src="img/squ.png" id="squ" height="200" width="200"/></div>
         </div>
 
         <div class="row">
-            <div class="image-container"><img src="img/hex.png" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/rec.png" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/sta.png" height="200" width="200"/></div>
+            <div class="image-container"><img src="img/hex.png" id="hex" height="200" width="200"/></div>
+            <div class="image-container"><img src="img/rec.png" id="rec" height="200" width="200"/></div>
+            <div class="image-container"><img src="img/sta.png" id="sta" height="200" width="200"/></div>
             </div>
 
         <div class="row">
-            <div class="image-container"><img src="img/trr.png" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/sqr.png" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/her.png" height="200" width="200"/></div>
+            <div class="image-container"><img src="img/trr.png" id="trr" height="200" width="200"/></div>
+            <div class="image-container"><img src="img/sqr.png" id="sqr" height="200" width="200"/></div>
+            <div class="image-container"><img src="img/her.png" id="her" height="200" width="200"/></div>
         </div>
         
     </body>
@@ -47,5 +47,13 @@
     const circle = document.getElementById (`circle`)
     circle.onpointerdown = () => {
         door_sound.play ()
+    }
+
+    const slam_sound = document.createElement (`audio`)
+    slam_sound.src = 'aud/slam.mp3'
+
+    const tri = document.getElementById (`tri`)
+    tri.onpointerdown = () => {
+        slam_sound.play ()
     }
 </script>
