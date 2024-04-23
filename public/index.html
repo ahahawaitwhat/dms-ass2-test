@@ -39,3 +39,13 @@
     </body>
     
 </html>
+
+<script>
+    const door_sound = document.createElement (`audio`)
+    door_sound.src = 'aud/door_close.mp3'
+
+    const circle = document.getElementById (`circle_el`)
+    circle.onpointerdown = () => {
+        door_sound.play ()
+    }
+</script>
