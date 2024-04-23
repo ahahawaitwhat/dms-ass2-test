@@ -19,7 +19,7 @@
     <body>
 
         <div class="row">
-            <div class="image-container"><img src="img/cir.png" height="200" width="200"/></div>
+            <div class="image-container"><img src="img/cir.png" id="circle" height="200" width="200"/></div>
             <div class="image-container"><img src="img/tri.png" height="200" width="200"/></div>
             <div class="image-container"><img src="img/squ.png" height="200" width="200"/></div>
         </div>
@@ -44,7 +44,7 @@
     const door_sound = document.createElement (`audio`)
     door_sound.src = 'aud/door_close.mp3'
 
-    const circle = document.getElementById (`circle_el`)
+    const circle = document.getElementById (`circle`)
     circle.onpointerdown = () => {
         door_sound.play ()
     }
