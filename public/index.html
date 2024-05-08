@@ -19,7 +19,7 @@
     <body>
 
         <div class="row">
-            <div class="image-container"><img src="imga/banana-bw.png" id="circle" height="200" width="200"/></div>
+            <div class="image-container"><img src="imga/banana-bw.png" id="banana" height="200" width="200"/></div>
             <div class="image-container"><img src="imga/ufo-bw.png" id="tri" height="200" width="200"/></div>
             <div class="image-container"><img src="imga/axe-bw.png" id="squ" height="200" width="200"/></div>
         </div>
@@ -42,17 +42,17 @@
 
 <script>
     const door_sound = document.createElement (`audio`)
-    door_sound.src = 'aud/door_close.mp3'
+    door_sound.src = 'aud/banana.mp3'
 
-    const circle_element = document.getElementById ("circle_id")
-    circle_element.onpointerover = () => {
-        circle_element.src = "img/hex.png"
+    const banana_element = document.getElementById ("banana_id")
+    banana_element.onpointerover = () => {
+        banana_element.src = "img/banana.png"
     }
-    circle_element.onpointerout = () => {
-        circle_element.src = "img/cir.png"
+    banana_element.onpointerout = () => {
+        banana_element.src = "img/banana-bw.png"
     }
-    const circle = document.getElementById (`circle`)
-    circle.onpointerdown = () => {
+    const banana = document.getElementById (`banana`)
+    banana.onpointerdown = () => {
         door_sound.play ()
     }
 
