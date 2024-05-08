@@ -19,21 +19,21 @@
     <body>
 
         <div class="row">
-            <div class="image-container"><img src="img/cir.png" id="circle" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/tri.png" id="tri" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/squ.png" id="squ" height="200" width="200"/></div>
+            <div class="image-container"><img src="imga/electricity-bw.png" id="circle" height="200" width="200"/></div>
+            <div class="image-container"><img src="imga/ufo-bw.png" id="tri" height="200" width="200"/></div>
+            <div class="image-container"><img src="imga/axe-bw.png" id="squ" height="200" width="200"/></div>
         </div>
 
         <div class="row">
-            <div class="image-container"><img src="img/hex.png" id="hex" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/rec.png" id="rec" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/sta.png" id="sta" height="200" width="200"/></div>
+            <div class="image-container"><img src="imga/hypnosis-bw.png" id="hex" height="200" width="200"/></div>
+            <div class="image-container"><img src="imga/flood-bw.png" id="rec" height="200" width="200"/></div>
+            <div class="image-container"><img src="imga/stink-bw.png" id="sta" height="200" width="200"/></div>
             </div>
 
         <div class="row">
-            <div class="image-container"><img src="img/trr.png" id="trr" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/sqr.png" id="sqr" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/her.png" id="her" height="200" width="200"/></div>
+            <div class="image-container"><img src="imga/banana-bw.png" id="trr" height="200" width="200"/></div>
+            <div class="image-container"><img src="imga/bunny-bw.png" id="sqr" height="200" width="200"/></div>
+            <div class="image-container"><img src="imga/flame-bw.png" id="her" height="200" width="200"/></div>
         </div>
         
     </body>
@@ -44,6 +44,13 @@
     const door_sound = document.createElement (`audio`)
     door_sound.src = 'aud/door_close.mp3'
 
+    const circle_element = document.getElementById ("circle_id")
+    circle_element.onpointerover = () => {
+        circle_element.src = "img/hex.png"
+    }
+    circle_element.onpointerout = () => {
+        circle_element.src = "img/cir.png"
+    }
     const circle = document.getElementById (`circle`)
     circle.onpointerdown = () => {
         door_sound.play ()
