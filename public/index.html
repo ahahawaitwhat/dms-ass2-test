@@ -2,7 +2,7 @@
 <html>
     
     <head>
-    <title>Icon Template Square</title>
+    <title>Icon Template axeare</title>
         <style>
             .row{
                 width:720px;
@@ -20,13 +20,13 @@
 
         <div class="row">
             <div class="image-container"><img src="imga/banana-bw.png" id="banana" height="200" width="200"/></div>
-            <div class="image-container"><img src="imga/ufo-bw.png" id="tri" height="200" width="200"/></div>
-            <div class="image-container"><img src="imga/axe-bw.png" id="squ" height="200" width="200"/></div>
+            <div class="image-container"><img src="imga/ufo-bw.png" id="ufo" height="200" width="200"/></div>
+            <div class="image-container"><img src="imga/axe-bw.png" id="axe" height="200" width="200"/></div>
         </div>
 
         <div class="row">
-            <div class="image-container"><img src="imga/hypnosis-bw.png" id="hex" height="200" width="200"/></div>
-            <div class="image-container"><img src="imga/bunny-bw.png" id="rec" height="200" width="200"/></div>
+            <div class="image-container"><img src="imga/hypnosis-bw.png" id="hypnosis" height="200" width="200"/></div>
+            <div class="image-container"><img src="imga/bunny-bw.png" id="bunny" height="200" width="200"/></div>
             <div class="image-container"><img src="imga/stink-bw.png" id="sta" height="200" width="200"/></div>
             </div>
 
@@ -56,35 +56,20 @@
         door_sound.play ()
     }
 
-    const slam_sound = document.createElement (`audio`)
-    slam_sound.src = 'aud/slam.mp3'
+    const ufo_sound = document.createElement (`audio`)
+    ufo_sound.src = 'aud/ufo.mp3'
 
-    const tri = document.getElementById (`tri`)
-    tri.onpointerdown = () => {
-        slam_sound.play ()
+    const ufo_element = document.getElementById (`ufo`)
+    ufo_element.onpointerover = () => {
+        ufo_element.src = "imga/ufo.png"
+    }
+    ufo_element.onpointerout = () => {
+        ufo_element.src = "imga/ufo-bw.png"
+    }
+    const ufo = document.getElementById (`ufo`)
+    ufo.onpointerdown = () => {
+        ufo_sound.play ()
     }
 
-    const velcro_sound = document.createElement (`audio`)
-    velcro_sound.src = 'aud/velcro.mp3'
-
-    const squ = document.getElementById (`squ`)
-    squ.onpointerdown = () => {
-        velcro_sound.play ()
-    }
-
-    const shoe_sound = document.createElement (`audio`)
-    shoe_sound.src = 'aud/shoe.mp3'
-
-    const hex = document.getElementById (`hex`)
-    hex.onpointerdown = () => {
-        shoe_sound.play ()
-    }
-
-    const headphone_sound = document.createElement (`audio`)
-    headphone_sound.src = 'aud/headphone.mp3'
-
-    const rec = document.getElementById (`rec`)
-    rec.onpointerdown = () => {
-        headphone_sound.play ()
-    }
+    
 </script>
