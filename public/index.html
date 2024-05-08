@@ -2,7 +2,7 @@
 <html>
     
     <head>
-    <title>Icon Template axeare</title>
+    <title>Icons</title>
         <style>
             .row{
                 width:720px;
@@ -11,7 +11,7 @@
             .image-container {
                 display: table-cell;
                 vertical-align: middle;
-                padding:20px;
+                padding:30px;
             }
         </style>
     </head>
@@ -27,13 +27,13 @@
         <div class="row">
             <div class="image-container"><img src="imga/hypnosis-bw.png" id="hypnosis" height="200" width="200"/></div>
             <div class="image-container"><img src="imga/bunny-bw.png" id="bunny" height="200" width="200"/></div>
-            <div class="image-container"><img src="imga/stink-bw.png" id="sta" height="200" width="200"/></div>
+            <div class="image-container"><img src="imga/stink-bw.png" id="stink" height="200" width="200"/></div>
             </div>
 
         <div class="row">
-            <div class="image-container"><img src="imga/electricity-bw.png" id="trr" height="200" width="200"/></div>
-            <div class="image-container"><img src="imga/flood-bw.png" id="sqr" height="200" width="200"/></div>
-            <div class="image-container"><img src="imga/flame-bw.png" id="her" height="200" width="200"/></div>
+            <div class="image-container"><img src="imga/electricity-bw.png" id="electricity" height="200" width="200"/></div>
+            <div class="image-container"><img src="imga/flood-bw.png" id="flood" height="200" width="200"/></div>
+            <div class="image-container"><img src="imga/flame-bw.png" id="flame" height="200" width="200"/></div>
         </div>
         
     </body>
@@ -71,5 +71,109 @@
         ufo_sound.play ()
     }
 
-    
+    const axe_sound = document.createElement (`audio`)
+    axe_sound.src = 'aud/axe.mp3'
+
+    const axe_element = document.getElementById (`axe`)
+    axe_element.onpointerover = () => {
+        axe_element.src = "imga/axe.png"
+    }
+    axe_element.onpointerout = () => {
+        axe_element.src = "imga/axe-bw.png"
+    }
+    const axe = document.getElementById (`axe`)
+    axe.onpointerdown = () => {
+        axe_sound.play ()
+    }
+
+    const hypnosis_sound = document.createElement (`audio`)
+    hypnosis_sound.src = 'aud/hypnosis.mp3'
+
+    const hypnosis_element = document.getElementById (`hypnosis`)
+    hypnosis_element.onpointerover = () => {
+        hypnosis_element.src = "imga/hypnosis.png"
+    }
+    hypnosis_element.onpointerout = () => {
+        hypnosis_element.src = "imga/hypnosis-bw.png"
+    }
+    const hypnosis = document.getElementById (`hypnosis`)
+    hypnosis.onpointerdown = () => {
+        hypnosis_sound.play ()
+    }
+
+    const bunny_sound = document.createElement (`audio`)
+    bunny_sound.src = 'aud/bunny.mp3'
+
+    const bunny_element = document.getElementById (`bunny`)
+    bunny_element.onpointerover = () => {
+        bunny_element.src = "imga/bunny.png"
+    }
+    bunny_element.onpointerout = () => {
+        bunny_element.src = "imga/bunny-bw.png"
+    }
+    const bunny = document.getElementById (`bunny`)
+    bunny.onpointerdown = () => {
+        bunny_sound.play ()
+    }
+
+    const stink_sound = document.createElement (`audio`)
+    stink_sound.src = 'aud/stink.mp3'
+
+    const stink_element = document.getElementById (`stink`)
+    stink_element.onpointerover = () => {
+        stink_element.src = "imga/stink.png"
+    }
+    stink_element.onpointerout = () => {
+        stink_element.src = "imga/stink-bw.png"
+    }
+    const stink = document.getElementById (`stink`)
+    stink.onpointerdown = () => {
+        stink_sound.play ()
+    }
+
+    const electricity_sound = document.createElement (`audio`)
+    electricity_sound.src = 'aud/electricity.mp3'
+
+    const electricity_element = document.getElementById (`electricity`)
+    electricity_element.onpointerover = () => {
+        electricity_element.src = "imga/electricity.png"
+    }
+    electricity_element.onpointerout = () => {
+        electricity_element.src = "imga/electricity-bw.png"
+    }
+    const electricity = document.getElementById (`electricity`)
+    electricity.onpointerdown = () => {
+        electricity_sound.play ()
+    }
+
+    const flood_sound = document.createElement (`audio`)
+    flood_sound.src = 'aud/flood.mp3'
+
+    const flood_element = document.getElementById (`flood`)
+    flood_element.onpointerover = () => {
+        flood_element.src = "imga/flood.png"
+    }
+    flood_element.onpointerout = () => {
+        flood_element.src = "imga/flood-bw.png"
+    }
+    const flood = document.getElementById (`flood`)
+    flood.onpointerdown = () => {
+        flood_sound.play ()
+    }
+
+    const flame_sound = document.createElement (`audio`)
+    flame_sound.src = 'aud/flame.mp3'
+
+    const flame_element = document.getElementById (`flame`)
+    flame_element.onpointerover = () => {
+        flame_element.src = "imga/flame.png"
+    }
+    flame_element.onpointerout = () => {
+        flame_element.src = "imga/flame-bw.png"
+    }
+    const flame = document.getElementById (`flame`)
+    flame.onpointerdown = () => {
+        flame_sound.play ()
+    }
+
 </script>
